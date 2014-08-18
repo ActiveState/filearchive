@@ -271,5 +271,12 @@ def cd(pth):
         os.chdir(cwd)
 
 
+def existing(pth):
+    """Return `pth` after checking it exists"""
+    if not path.exists(pth):
+        raise IOError('"{0}" does not exist'.format(pth))
+    return pth
+
+
 if __name__ == '__main__':
     unpack_archive("nonexistent")
