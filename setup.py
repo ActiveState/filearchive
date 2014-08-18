@@ -12,9 +12,8 @@ def read(fname):
 setup(
     name='filearchive',
     version="1.0",
-    description='Simple wrapper around SQLalchemy',
+    description='Python module to work with file archives',
     long_description=read('README.md'),
-    keywords='sqlalchemy database',
     author='Sridhar Ratnakumar',
     author_email='github@srid.name',
     url='http://github.com/ActiveState/filearchive',
