@@ -11,7 +11,7 @@ def read(fname):
 
 setup(
     name='filearchive',
-    version="1.0",
+    version="1.1dev",
     description='Python module to work with file archives',
     long_description=read('README.md'),
     author='Sridhar Ratnakumar',
