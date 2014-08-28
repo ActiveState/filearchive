@@ -1,0 +1,16 @@
+News
+====
+
+dev
+---
+
+*Release date: ??-2014*
+
+- ..
+
+1.0.1
+-----
+
+*Release date: 28-August-2024*
+
+- Initial release (imported from applib project)
