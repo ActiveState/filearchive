@@ -4,5 +4,6 @@ WORKDIR /app
 RUN pip install wheel
 ADD . /app
 RUN python setup.py sdist
-RUN pip install --use-wheel dist/* 
-# RUN python -m filearchive
+RUN pip install --use-wheel dist/*
+
+ENTRYPOINT ["python", "-m", "filearchive"]

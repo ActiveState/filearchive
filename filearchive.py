@@ -279,4 +279,8 @@ def existing(pth):
 
 
 if __name__ == '__main__':
-    unpack_archive("nonexistent")
+    from subprocess import check_output
+    print("Unpacking %s" % sys.argv[1])
+    path, ext = unpack_archive(sys.argv[1])
+    print("Extracted at %s as %s" % (path, ext))
+    print check_output("file %s; ls -lR %s" % (path, path), shell=True)
