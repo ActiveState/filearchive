@@ -11,6 +11,7 @@ Example
 >>> filearchive.unpack_archive("/Users/srid/Downloads/data.tgz")
 ...
 >>> srcdir = "/home/me/project"
->>> filearchive.pack_archive("/tmp/data.zip", [srcdir], srcdir, "zip")
+>>> filearchive.pack_archive(
+       "/tmp/data.zip", [srcdir], os.path.dirname(srcdir), "zip")
 ...
 ```
