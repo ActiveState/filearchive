@@ -1,12 +1,12 @@
 News
 ====
 
-dev
+1.1
 ---
 
-*Release date: ??-2014*
+*Release date: 29-Aug-2014*
 
-- ..
+- Handle OSError and IOError from tarfile (GitHub #1)
 
 1.0.1
 -----

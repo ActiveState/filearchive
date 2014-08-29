@@ -81,16 +81,22 @@ class CompressedFile:
             toplevel = _archive_basename(self.filename)
             os.mkdir(toplevel)
             with cd(toplevel):
-                f.extractall()
+                self._extractall(f)
             return path.abspath(toplevel)
         else:
-            f.extractall()
+            self._extractall(f)
             toplevel = path.abspath(toplevels[0])
             assert path.exists(toplevel)
             if not path.isdir(toplevel):
                 # eg: http://pypi.python.org/pypi/DeferArgs/0.4
                 raise SingleFile('archive has a single file: %s', toplevel)
             return toplevel
+
+    def _extractall(self, f):
+        try:
+            return f.extractall()
+        except (IOError, OSError) as e:
+            raise PackError(e)
 
 
 
