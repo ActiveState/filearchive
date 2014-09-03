@@ -3,7 +3,10 @@ News
 dev
 ---
 
-- ...
+1.1.1
+-----
+
+* Fix NameError when removing a file (GitHub #3)
 
 1.1
 ---

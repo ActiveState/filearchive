@@ -41,7 +41,7 @@ def pack_archive(filename, files, pwd, filetype="tgz"):
     assert filetype in implementors, 'invalid filetype: %s' % filetype
 
     if path.exists(filename):
-        rm(filename)
+        os.remove(filename)
 
     with cd(pwd):
         relnames = [path.relpath(file, pwd) for file in files]
